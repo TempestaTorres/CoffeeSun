@@ -1,0 +1,221 @@
+
+.shop-cart:hover {
+    & a svg path {
+        fill: var(--accent);
+    }
+}
+
+.link-item:hover a {
+    color: var(--accent);
+}
+
+h1.title {
+    animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+p.subtitle {
+    animation: fadeInUp 1s ease 0.7s forwards;
+}
+
+/* Hero buttons */
+.button:hover {
+    color: var(--color-white);
+    background: linear-gradient(var(--border), var(--border)) padding-box,
+    linear-gradient(90deg, var(--border), var(--border)) border-box;
+    box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 2px 1px;
+}
+
+.advantages-items {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    column-gap: 0.938rem;
+    row-gap: 1.875rem;
+}
+
+.marker {
+    border-color: var(--ring-color);
+}
+
+/* Tabs buttons */
+.btn.btn-active {
+    color: var(--primary);
+}
+
+.btn:hover, .btn-active {
+    background-color: var(--primary-background);
+    color: var(--primary);
+}
+
+.card-btn {
+    background-color: var(--primary-background);
+}
+
+/* Catalog */
+
+.catalog-item:is(.catalog-item-active) {
+    animation: .5s ease forwards;
+    animation-name: fadeIn;
+}
+
+.catalog-item:is(.catalog-item-inactive) {
+    animation: .5s ease forwards;
+    animation-name: fadeOut;
+}
+
+/* Cards */
+.card-container {
+    border-radius: 1.25rem;
+    background-color: #151515;
+}
+
+.card-container:hover {
+    transform: translateY(-5px);
+}
+
+.coffee-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #886044;
+    color: #ede3dc;
+    padding: 0.625rem;
+    backdrop-filter: blur(29px);
+}
+
+.card-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    background-color: var(--card-foreground);
+    padding: 1.563rem 2rem;
+}
+
+.card-body {
+    padding: 0 2.5rem;
+}
+
+.card-footer {
+    padding: 0 1.25rem 1.25rem 1.25rem; /* 20px */
+}
+
+.card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.125rem;
+    height: 3.563rem;
+}
+
+.coffee-card:is(.type-red) {
+    background: linear-gradient(163deg, #850c1b 0%, rgba(246, 21, 53, 0.2) 100%);
+}
+
+.coffee-card:is(.type-green) {
+    background: linear-gradient(163deg, #002416 0%, rgba(0, 144, 113, 0.2) 100%);
+}
+
+.coffee-card:is(.type-black) {
+    background: linear-gradient(163deg, #6f6f71 0%, rgba(67, 65, 69, 0.2) 100%);
+}
+
+.coffee-card:is(.type-gray) {
+    background: linear-gradient(163deg, #d7d2cf 0%, rgba(239, 239, 239, 0.2) 100%);
+}
+
+.coffee-card:is(.type-blue) {
+    background: linear-gradient(163deg, #023860 0%, rgba(16, 46, 72, 0.2) 100%);
+}
+
+.card-btn:hover {
+    background: none;
+}
+
+.product-item-label {
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    left: 10px;
+}
+
+.product-item-text {
+    text-transform: uppercase;
+    background-color: #008205;
+    padding: 0 0.75rem;
+}
+
+/* Order */
+::placeholder {
+    color: var(--color-accent);
+}
+
+input:focus {
+    outline: 0.01rem solid var(--ring-focus);
+}
+
+input:invalid:required {
+    outline: 0.01rem solid rgb(239 68 68 / 1);
+}
+
+#form:is(.was-validated) {
+    animation: .5s ease forwards;
+    animation-name: fadeOut;
+}
+
+.thanks-text {
+    display: none;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 -1px 4px #f8f4f1, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    animation: .5s ease;
+    animation-name: fadeIn;
+}
+
+/* Floats */
+.float {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #211710 45%, #e8dad1);
+    filter: drop-shadow(0 0 14px #d8c0b0);
+    width: 310px;
+    height: 310px;
+}
+
+.float-left {
+    transform: translate3d(0, 0, 0);
+    animation: float-right 10s ease infinite;
+}
+
+.float-right {
+    /*width: 360px;
+    height: 360px;*/
+    transform: translate3d(0, 0, 0);
+    animation: float-left 10s ease infinite;
+}
+
+.footer-container {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+}
+
+@keyframes float-left {
+    0%, 100% {
+        transform: translate3d(-5px, 0, 0) rotate(0deg) scaleX(-1);
+    }
+    50% {
+        transform: translate3d(-41px, 76px, 0) rotate(15deg);
+    }
+}
+
+@keyframes float-right {
+    0%, 100% {
+        transform: translate3d(35px, 46px, 0) rotate(0deg) scaleX(-1);
+    }
+    50% {
+        transform: translate3d(35px, -46px, 0) rotate(-15deg);
+    }
+}

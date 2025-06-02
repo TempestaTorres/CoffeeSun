@@ -1,0 +1,97 @@
+:root {
+    --primary: #ebdfd6;            /* for text color */
+    --accent: #ba9174;
+    --color-accent: #dbc5b5;
+    --color-white: #f8f4f1;
+    --border:hsl(9, 23%, 30%);
+    --card-text: #e0cdc0;
+    --card-foreground: #e8dad1;
+    --secondary-foreground:  0 0% 98%;
+    --secondary: hsl(18, 26%, 15%);/*240 3.7% 15.9%;*/
+    --background: hsl(20, 26%, 16%);
+    --background-footer: hsl(25, 33%, 11%);
+    --header-background: #211710;
+    --foreground: 0 0% 98%;
+    --primary-background: hsl(9, 23%, 30%);  /* main background */
+    --secondary-background: hsl(25, 33%, 11%);
+    --primary-foreground: hsl(9, 23%, 30%);
+    --accent-foreground: hsl(9, 23%, 35%);
+    --input-background: hsl(14, 23%, 11%);
+    --border-radius: 0.938rem;
+    --ring-color: #a97754;
+    --ring-focus: #e3d2c6;
+}
+
+html {
+    line-height: 1.5;
+    font-family: Roboto, sans-serif;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+}
+body {
+    background-color: var(--background);
+    color: var(--primary);
+}
+.bg-header {
+    background-color: rgba(33, 23, 16, 0.6);
+}
+.bg-footer {
+    background-color: var(--background-footer);
+}
+.bg-input {
+    background-color: var(--input-background);
+}
+.bg-transparent {
+    background-color: transparent;
+}
+.bg-background {
+    background-color: var(--background);
+}
+.bg-primary {
+    background-color: var(--primary-background);
+}
+.bg-secondary {
+    background-color: hsl(18, 26%, 15%);
+}
+.bg-accent {
+    background-color: var(--color-accent);
+}
+.bg-radial {
+    background-image: radial-gradient(45% 25%, #0000 0%, #0000000d 100%);
+}
+.bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, hsla(9, 20%, 42%, 0.2), hsl(9 20% 42%  / .4));
+}
+.text-primary {
+    color: var(--primary);
+}
+.subtext {
+    color: #d2b8a5;
+}
+.text-primary-foreground {
+    color: var(--primary-foreground);
+}
+.text-accent {
+    color: var(--accent);
+}
+.text-red {
+    color: rgb(239, 68, 68);
+}
+.card-text {
+    color: var(--card-text);
+}
+.border-primary {
+    border-color: var(--border);
+}
+.border-transparent {
+    border: 1px solid transparent;
+}
+.border-linear-gr {
+    border: 1px solid transparent;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+    linear-gradient( 90deg, var(--border), var(--primary)) border-box;
+}
+.border-zinc-700 {
+    --border-opacity: 1;
+    border-color: rgb(63 63 70 / var(--border-opacity, 1));
+}

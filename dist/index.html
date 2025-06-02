@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Sun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/effects.css">
+    <link rel="stylesheet" href="./styles/component.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/responsive.component.css">
+    <script src="./scripts/scrollApi.js"></script>
+    <script src="./scripts/form.validate.js"></script>
+    <script src="./scripts/tabs.js"></script>
+    <script src="./scripts/app.js"></script>
+</head>
+<body>
+<div class="flex flex-col min-h-screen">
+    <header class="header bg-transparent w-full fixed z-50 top-0 py-7">
+        <div class="header-container container flex-row-container space-between">
+            <a href="#" class="logo transition">
+                <svg width="113" height="23" viewBox="0 0 113 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.1495 5.72029C5.31903 5.55493 5.55214 5.44125 5.84882 5.37924C6.16669 5.31723 6.46337 5.26556 6.73886 5.22422C7.35341 5.20355 7.79842 5.32757 8.07391 5.59627C8.37059 5.86497 8.57191 6.21636 8.67787 6.65042C8.78382 7.06381 8.8368 7.51853 8.8368 8.0146C8.85799 8.51067 8.90038 8.95507 8.96395 9.34779C9.76922 9.49247 10.5427 9.59582 11.2844 9.65783C12.0473 9.69917 12.8208 9.63716 13.6049 9.4718C13.9439 8.52101 14.0711 7.59088 13.9863 6.68142C13.9015 5.77196 13.6578 4.93485 13.2552 4.17007C12.8526 3.38463 12.3122 2.6922 11.6341 2.09279C10.9559 1.49337 10.193 1.01797 9.3454 0.666591C8.51893 0.29454 7.62889 0.0775101 6.67528 0.0155023C5.72167 -0.0465066 4.75746 0.0775101 3.78266 0.387552C3.48598 0.470231 3.1999 0.573578 2.92441 0.697595C2.64892 0.800942 2.39462 0.935294 2.16152 1.10065C1.75888 1.45203 1.40923 1.85509 1.11255 2.30982C0.837059 2.76455 0.603954 3.26061 0.413232 3.79802C0.286084 4.10807 0.180127 4.44911 0.0953612 4.82116C0.0317871 5.17255 0.0211914 5.52393 0.0635741 5.87531C0.0423827 7.54954 0.0211914 9.02741 0 10.3089C0 11.5698 0 12.7066 0 13.7194C0.0211914 14.7115 0.0423827 15.6106 0.0635741 16.4168C0.0847655 17.2229 0.116553 17.998 0.158935 18.7421C0.243701 19.6102 0.519189 20.3336 0.985399 20.9124C1.4728 21.4911 2.06616 21.9459 2.76547 22.2766C3.46479 22.5866 4.21708 22.783 5.02235 22.8656C5.82763 22.969 6.61171 22.969 7.3746 22.8656C8.54012 22.845 9.5785 22.5659 10.4897 22.0285C11.4221 21.4705 12.1744 20.7677 12.7466 19.9202C13.3188 19.0728 13.6896 18.122 13.8592 17.0679C14.0287 15.993 13.9333 14.9182 13.5731 13.8434C13.2764 13.7607 12.9373 13.7091 12.5559 13.6884C12.1956 13.6677 11.8248 13.6574 11.4433 13.6574C11.0619 13.6574 10.6805 13.6677 10.299 13.6884C9.93875 13.7091 9.61029 13.6987 9.31361 13.6574C9.20765 14.1741 9.16527 14.7012 9.18646 15.2386C9.22884 15.7553 9.13348 16.2514 8.90038 16.7268C8.68846 17.1402 8.37059 17.4399 7.94676 17.6259C7.54413 17.7913 7.1097 17.8533 6.64349 17.812C6.02894 17.6466 5.58393 17.2849 5.30844 16.7268C5.05414 16.1481 4.89521 15.559 4.83163 14.9596C4.76806 14.2361 4.73627 13.3887 4.73627 12.4172C4.73627 11.4251 4.74687 10.4743 4.76806 9.56482C4.78925 8.65536 4.81044 7.86992 4.83163 7.20849C4.87401 6.54707 4.9164 6.18535 4.95878 6.12334C4.97997 6.082 5.00116 6.02 5.02235 5.93732C5.06474 5.83397 5.10712 5.76163 5.1495 5.72029Z"
+                          fill="#5F413C"/>
+                    <path d="M15.966 8.38665C15.9025 8.61402 15.8071 8.92406 15.68 9.31678C15.5528 9.68883 15.4786 9.98854 15.4574 10.2159C15.3939 10.6086 15.3515 10.991 15.3303 11.3631C15.3091 11.7144 15.2985 12.0762 15.2985 12.4482C15.3621 13.1303 15.3727 13.8847 15.3303 14.7115C15.3091 15.5383 15.3197 16.3651 15.3621 17.1919C15.4045 17.998 15.5316 18.7731 15.7435 19.5172C15.9554 20.2613 16.3475 20.8814 16.9197 21.3774C17.6614 22.1009 18.5726 22.5556 19.6533 22.7416C20.2467 22.7416 20.9036 22.7623 21.6241 22.8036C22.3446 22.8657 23.044 22.8657 23.7221 22.8036C24.4002 22.7623 25.0254 22.6383 25.5975 22.4316C26.1909 22.2249 26.6677 21.8735 27.0279 21.3774C27.2398 21.1707 27.3988 20.7884 27.5047 20.2303C27.6319 19.6722 27.7273 19.0418 27.7908 18.339C27.8756 17.6363 27.9286 16.9025 27.9498 16.1377C27.9921 15.3729 28.0239 14.6909 28.0451 14.0914C28.0239 13.4093 28.0027 12.7479 27.9815 12.1072C27.9604 11.4457 27.9074 10.8463 27.8226 10.3089C27.7378 9.75084 27.6107 9.26511 27.4412 8.85172C27.2716 8.43833 27.0385 8.13862 26.7419 7.95259C26.2968 7.5392 25.767 7.22916 25.1525 7.02247C24.5379 6.7951 23.8916 6.66075 23.2135 6.61941C22.7685 6.57807 22.3446 6.57807 21.942 6.61941C21.5606 6.64008 21.1579 6.62975 20.7341 6.58841C20.2255 6.58841 19.7169 6.61941 19.2083 6.68142C18.7209 6.74343 18.2547 6.85711 17.8097 7.02247C17.3859 7.16715 17.0044 7.35318 16.6654 7.58054C16.3475 7.80791 16.1144 8.07661 15.966 8.38665ZM19.9394 12.0452C20.2149 11.7144 20.5752 11.4871 21.0202 11.3631C21.8466 11.177 22.5142 11.2494 23.0228 11.5801C23.5314 11.9108 23.8386 12.4379 23.9446 13.1613C24.0717 13.7607 24.1035 14.4015 24.04 15.0836C23.9976 15.745 23.934 16.4064 23.8492 17.0679C23.7221 17.5846 23.4784 17.9256 23.1181 18.091C22.8426 18.2357 22.493 18.339 22.0692 18.401C21.6453 18.4424 21.2321 18.4217 20.8295 18.339C20.448 18.2357 20.1195 18.06 19.8441 17.812C19.5686 17.5432 19.4414 17.1712 19.4626 16.6958C19.505 15.9724 19.5262 15.2903 19.5262 14.6495C19.5262 13.9881 19.5686 13.3267 19.6533 12.6652C19.7169 12.3345 19.8123 12.1278 19.9394 12.0452Z"
+                          fill="#5F413C"/>
+                    <path d="M35.6499 11.4871C36.3069 11.5078 36.9956 11.5388 37.7161 11.5801C38.4578 11.6214 39.369 11.6731 40.4498 11.7351C40.4922 11.3424 40.5239 11.0324 40.5451 10.805C40.5663 10.5776 40.5769 10.3916 40.5769 10.2469C40.5981 10.1022 40.6087 9.96787 40.6087 9.84385C40.6087 9.69917 40.6087 9.51314 40.6087 9.28578C40.6299 8.9964 40.6299 8.74837 40.6087 8.54167C40.5875 8.31431 40.5981 8.08695 40.6405 7.85958H35.7771C35.6711 7.34284 35.6711 6.88811 35.7771 6.49539C35.9042 6.082 36.2115 5.83397 36.6989 5.75129C36.9956 5.70995 37.324 5.66861 37.6843 5.62727C38.0445 5.56527 38.4048 5.51359 38.7651 5.47225C39.1253 5.43091 39.4644 5.39991 39.7822 5.37924C40.1213 5.35857 40.418 5.35857 40.6723 5.37924C40.7147 5.08987 40.757 4.76949 40.7994 4.41811C40.8418 4.06673 40.8736 3.70501 40.8948 3.33296C40.916 2.96091 40.9054 2.58886 40.863 2.2168C40.8418 1.84475 40.7782 1.50371 40.6723 1.19366C39.6763 1.15232 38.6485 1.17299 37.5889 1.25567C36.5506 1.31768 35.5863 1.49337 34.6963 1.78275C33.9758 2.01011 33.393 2.36149 32.948 2.83689C32.503 3.29162 32.1534 3.80836 31.8991 4.3871C31.6659 4.94518 31.5176 5.52393 31.454 6.12334C31.3905 6.72276 31.3799 7.28084 31.4222 7.79757C31.0832 7.7769 30.7229 7.76657 30.3415 7.76657C29.9812 7.76657 29.5786 7.76657 29.1336 7.76657L29.2289 11.5491C29.6528 11.5284 30.0448 11.5181 30.4051 11.5181C30.7865 11.5181 31.1468 11.5181 31.4858 11.5181C31.4858 11.8281 31.4752 12.2725 31.454 12.8513C31.454 13.43 31.4434 14.0914 31.4222 14.8355C31.4222 15.559 31.4222 16.3134 31.4222 17.0989C31.4222 17.8843 31.4222 18.6387 31.4222 19.3622C31.4434 20.0649 31.454 20.7057 31.454 21.2844C31.4752 21.8425 31.507 22.2456 31.5494 22.4936C31.8249 22.5349 32.1216 22.5453 32.4394 22.5246C32.7785 22.5039 33.1282 22.4833 33.4884 22.4626C33.8487 22.4213 34.2089 22.3903 34.5692 22.3696C34.9294 22.3489 35.2897 22.3592 35.6499 22.4006V18.246V11.4871Z"
+                          fill="#5F413C"/>
+                    <path d="M47.6942 11.4871C48.3512 11.5078 49.0399 11.5388 49.7604 11.5801C50.5021 11.6214 51.4133 11.6731 52.4941 11.7351C52.5365 11.3424 52.5683 11.0324 52.5894 10.805C52.6106 10.5776 52.6212 10.3916 52.6212 10.2469C52.6424 10.1022 52.653 9.96787 52.653 9.84385C52.653 9.69917 52.653 9.51314 52.653 9.28578C52.6742 8.9964 52.6742 8.74837 52.653 8.54167C52.6318 8.31431 52.6424 8.08695 52.6848 7.85958H47.8214C47.7154 7.34284 47.7154 6.88811 47.8214 6.49539C47.9485 6.082 48.2558 5.83397 48.7432 5.75129C49.0399 5.70995 49.3684 5.66861 49.7286 5.62727C50.0889 5.56527 50.4491 5.51359 50.8094 5.47225C51.1696 5.43091 51.5087 5.39991 51.8266 5.37924C52.1656 5.35857 52.4623 5.35857 52.7166 5.37924C52.759 5.08987 52.8014 4.76949 52.8437 4.41811C52.8861 4.06673 52.9179 3.70501 52.9391 3.33296C52.9603 2.96091 52.9497 2.58886 52.9073 2.2168C52.8861 1.84475 52.8226 1.50371 52.7166 1.19366C51.7206 1.15232 50.6928 1.17299 49.6332 1.25567C48.5949 1.31768 47.6307 1.49337 46.7406 1.78275C46.0201 2.01011 45.4374 2.36149 44.9923 2.83689C44.5473 3.29162 44.1977 3.80836 43.9434 4.3871C43.7103 4.94518 43.5619 5.52393 43.4983 6.12334C43.4348 6.72276 43.4242 7.28084 43.4666 7.79757C43.1275 7.7769 42.7672 7.76657 42.3858 7.76657C42.0255 7.76657 41.6229 7.76657 41.1779 7.76657L41.2733 11.5491C41.6971 11.5284 42.0891 11.5181 42.4494 11.5181C42.8308 11.5181 43.1911 11.5181 43.5301 11.5181C43.5301 11.8281 43.5195 12.2725 43.4983 12.8513C43.4983 13.43 43.4878 14.0914 43.4666 14.8355C43.4666 15.559 43.4666 16.3134 43.4666 17.0989C43.4666 17.8843 43.4666 18.6387 43.4666 19.3622C43.4878 20.0649 43.4983 20.7057 43.4983 21.2844C43.5195 21.8425 43.5513 22.2456 43.5937 22.4936C43.8692 22.5349 44.1659 22.5453 44.4837 22.5246C44.8228 22.5039 45.1725 22.4833 45.5327 22.4626C45.893 22.4213 46.2532 22.3903 46.6135 22.3696C46.9737 22.3489 47.334 22.3592 47.6942 22.4006V18.246V11.4871Z"
+                          fill="#5F413C"/>
+                    <path d="M57.8313 14.7425C58.0432 14.7839 58.3823 14.8149 58.8485 14.8355C59.3147 14.8562 59.8339 14.8665 60.4061 14.8665C60.9994 14.8665 61.614 14.8562 62.2497 14.8355C62.8855 14.8149 63.4788 14.7839 64.0298 14.7425C64.602 14.7012 65.0894 14.6599 65.492 14.6185C65.9158 14.5772 66.2019 14.5358 66.3503 14.4945C66.4138 13.6264 66.4138 12.7686 66.3503 11.9211C66.2867 11.0737 66.096 10.2986 65.7781 9.59582C65.4814 8.89306 65.0364 8.29364 64.443 7.79757C63.8497 7.30151 63.0656 6.97079 62.0908 6.80544C61.3279 6.61941 60.5438 6.53673 59.7386 6.5574C58.9333 6.57807 58.1704 6.70209 57.4499 6.92945C56.7294 7.13615 56.083 7.45653 55.5109 7.89059C54.9387 8.30398 54.5149 8.81038 54.2394 9.4098C53.9851 10.0919 53.8156 10.7947 53.7308 11.5181C53.6672 12.2208 53.6037 12.9546 53.5401 13.7194C53.4977 14.5668 53.5189 15.4143 53.6037 16.2617C53.6884 17.1092 53.8474 17.9153 54.0805 18.6801C54.3136 19.4242 54.6208 20.1166 55.0023 20.7574C55.3837 21.3774 55.8605 21.8838 56.4327 22.2766C56.9413 22.5659 57.4923 22.752 58.0856 22.8346C58.679 22.8346 59.3253 22.8553 60.0246 22.8967C60.7451 22.938 61.4445 22.938 62.1226 22.8967C62.8007 22.8553 63.4258 22.7313 63.998 22.5246C64.5702 22.3179 65.0364 21.9665 65.3967 21.4705C65.545 21.3464 65.6615 21.1294 65.7463 20.8194C65.8523 20.4887 65.937 20.1063 66.0006 19.6722C66.0642 19.2175 66.1172 18.7317 66.1595 18.215C66.2019 17.6983 66.2443 17.1712 66.2867 16.6338C66.0536 16.5718 65.7569 16.5408 65.3967 16.5408C65.0364 16.5201 64.655 16.5201 64.2523 16.5408C63.8709 16.5614 63.5 16.5821 63.1398 16.6028C62.7795 16.6028 62.4934 16.5925 62.2815 16.5718C62.3239 17.4192 62.1862 18.06 61.8683 18.494C61.5716 18.9074 61.2008 19.1555 60.7557 19.2381C60.3107 19.3208 59.8551 19.2485 59.3889 19.0211C58.9227 18.7938 58.5624 18.4424 58.3081 17.967C58.075 17.5949 57.9373 17.2125 57.8949 16.8198C57.8737 16.4271 57.8525 15.9207 57.8313 15.3006V14.7425ZM61.6776 9.93687C62.059 10.1229 62.3557 10.4019 62.5676 10.774C62.8007 11.146 62.9173 11.5388 62.9173 11.9521C62.9173 12.1175 62.9173 12.2312 62.9173 12.2932C62.9173 12.3345 62.8537 12.3655 62.7265 12.3862C62.6206 12.3862 62.4299 12.3759 62.1544 12.3552C61.8789 12.3345 61.4656 12.3242 60.9147 12.3242C60.1094 12.3242 59.4949 12.3345 59.071 12.3552C58.6684 12.3552 58.3717 12.3449 58.181 12.3242C57.9903 12.2829 57.8843 12.2208 57.8631 12.1382C57.8631 12.0348 57.8843 11.8695 57.9267 11.6421C57.9691 11.3734 58.0326 11.115 58.1174 10.867C58.2234 10.619 58.3717 10.4019 58.5624 10.2159C58.7532 10.0299 59.0075 9.88519 59.3253 9.78185C59.6432 9.6785 60.0564 9.62683 60.565 9.62683C60.7981 9.62683 60.9994 9.65783 61.169 9.71984C61.3385 9.76118 61.508 9.83352 61.6776 9.93687Z"
+                          fill="#5F413C"/>
+                    <path d="M81.7141 7.82858C82.0108 6.27836 81.8836 4.99685 81.3326 3.98405C80.7817 2.97124 79.9976 2.20647 78.9804 1.68973C78.4718 1.46237 77.9102 1.27634 77.2957 1.13165C76.7023 0.986969 76.0878 0.904291 75.452 0.883622C74.8375 0.842282 74.2229 0.862951 73.6084 0.94563C72.9938 1.00764 72.4323 1.14199 71.9237 1.34869C70.9065 1.76208 70.0376 2.3925 69.3171 3.23995C68.6178 4.0874 68.141 5.02786 67.8867 6.06133C67.6324 7.09481 67.643 8.15929 67.9185 9.25477C68.2152 10.3503 68.8509 11.3527 69.8257 12.2622C70.1224 12.5102 70.4509 12.7273 70.8111 12.9133C71.1714 13.0993 71.5634 13.2337 71.9873 13.3163C72.4323 13.399 72.9091 13.492 73.4177 13.5954C73.9263 13.6781 74.3925 13.8124 74.8163 13.9984C75.2613 14.1845 75.6428 14.4325 75.9606 14.7425C76.2785 15.0319 76.4692 15.4246 76.5328 15.9207C76.6599 16.6441 76.5116 17.1815 76.0878 17.5329C75.6851 17.8843 75.1977 18.0703 74.6256 18.091C74.0746 18.091 73.5448 17.9256 73.0362 17.5949C72.5488 17.2642 72.2839 16.7681 72.2415 16.1067C71.521 16.1274 70.7158 16.1171 69.8257 16.0757C68.9357 16.0137 68.1198 16.0344 67.3781 16.1377V16.2307V16.3237C67.3146 17.3159 67.4947 18.2047 67.9185 18.9901C68.3423 19.7549 68.9145 20.406 69.635 20.9434C70.3555 21.4808 71.1714 21.9045 72.0826 22.2146C73.015 22.5039 73.9474 22.659 74.8799 22.6796C75.5368 22.7003 76.1725 22.6486 76.7871 22.5246C77.4228 22.3799 78.0056 22.1629 78.5354 21.8735C79.0864 21.5841 79.5738 21.2121 79.9976 20.7574C80.4214 20.3026 80.7605 19.7549 81.0148 19.1141C81.2691 18.5767 81.4492 18.0186 81.5552 17.4399C81.6823 16.8405 81.7247 16.2514 81.6823 15.6727C81.6611 15.0939 81.5552 14.5358 81.3644 13.9984C81.1737 13.4404 80.8876 12.9236 80.5062 12.4482C79.8916 11.5594 79.097 10.8257 78.1221 10.2469C77.1685 9.66816 76.1302 9.31678 75.007 9.19277C74.562 9.13076 74.1488 9.01707 73.7673 8.85172C73.3859 8.68636 73.1104 8.35565 72.9409 7.85958C72.9197 7.7149 72.8985 7.58054 72.8773 7.45653C72.8773 7.31184 72.8985 7.16715 72.9409 7.02247C73.0256 6.44372 73.3011 6.051 73.7673 5.8443C74.2547 5.63761 74.7527 5.58594 75.2613 5.68928C75.7699 5.79263 76.2043 6.03033 76.5646 6.40238C76.9248 6.77443 77.0414 7.2395 76.9142 7.79757C77.6559 8.00427 78.4506 8.09728 79.2983 8.07661C80.1459 8.03527 80.9406 7.95259 81.6823 7.82858H81.7141Z"
+                          fill="#5F413C"/>
+                    <path d="M97.3327 1.78275C97.0784 1.63806 96.7499 1.54505 96.3473 1.50371C95.9447 1.46237 95.5208 1.45203 95.0758 1.4727C94.6308 1.49337 94.1858 1.53471 93.7408 1.59672C93.3169 1.63806 92.9673 1.66906 92.6918 1.68973C92.6282 4.0874 92.5858 6.56774 92.5647 9.13076C92.5647 11.6938 92.5117 14.2155 92.4057 16.6958C92.2998 17.1712 92.0667 17.5432 91.7064 17.812C91.3461 18.0807 90.9541 18.2253 90.5303 18.246C90.1065 18.2667 89.6932 18.1633 89.2906 17.936C88.9091 17.7086 88.6442 17.3469 88.4959 16.8508C88.0721 11.7041 87.9767 6.62975 88.2098 1.62772V1.59672C87.892 1.51404 87.5423 1.46237 87.1609 1.4417C86.7794 1.40036 86.3874 1.37969 85.9847 1.37969C85.5821 1.37969 85.1795 1.39002 84.7768 1.41069C84.3954 1.43136 84.0457 1.4417 83.7278 1.4417H83.6961L83.7278 1.4727C83.7702 4.20108 83.7596 6.95012 83.6961 9.71984C83.6325 12.4896 83.6007 15.2386 83.6007 17.967C83.6431 18.9178 83.9186 19.7342 84.4272 20.4163C84.9569 21.0777 85.6033 21.6151 86.3662 22.0285C87.1503 22.4213 88.0191 22.69 88.9727 22.8346C89.9263 23 90.8481 23.0413 91.7382 22.9587C93.264 22.814 94.4719 22.2662 95.3619 21.3154C96.252 20.3646 96.7817 19.2071 96.9513 17.843C97.2479 15.1766 97.4175 12.4999 97.4599 9.81285C97.5022 7.10514 97.4599 4.42844 97.3327 1.78275Z"
+                          fill="#5F413C"/>
+                    <path d="M111.951 22.6796C112.311 22.6796 112.566 22.659 112.714 22.6176C112.862 22.5763 112.958 22.5453 113 22.5246V21.9045C113 21.4911 112.989 21.0777 112.968 20.6643C112.968 20.251 112.968 19.8376 112.968 19.4242C112.968 18.8454 112.968 18.277 112.968 17.7189C112.989 17.1609 113 16.5821 113 15.9827C113 15.0939 113 14.2051 113 13.3163C113 12.4275 112.989 11.5491 112.968 10.681V0.697595C112.354 0.573578 111.654 0.51157 110.87 0.51157C110.065 0.51157 109.302 0.573578 108.582 0.697595C108.56 1.21433 108.539 1.70007 108.518 2.1548C108.518 2.58886 108.518 3.02292 108.518 3.45698C108.518 4.20108 108.529 4.93485 108.55 5.65828C108.592 6.36104 108.613 7.12581 108.613 7.95259C108.613 8.30398 108.592 8.66569 108.55 9.03774C108.507 9.40979 108.454 9.61649 108.391 9.65783C108.37 9.65783 108.296 9.54415 108.168 9.31678C108.041 9.06875 107.882 8.77938 107.692 8.44866C107.522 8.09728 107.331 7.7149 107.119 7.30151C106.907 6.86745 106.706 6.46439 106.515 6.09234C106.325 5.69962 106.155 5.35857 106.007 5.0692C105.859 4.77982 105.763 4.58346 105.721 4.48012C105.53 4.04606 105.361 3.69467 105.212 3.42597C105.085 3.1366 104.958 2.87823 104.831 2.65086C104.725 2.4235 104.608 2.1858 104.481 1.93777C104.354 1.68973 104.216 1.37969 104.068 1.00764C104.068 0.966299 103.951 0.92496 103.718 0.883622C103.506 0.842282 103.252 0.811278 102.955 0.790608C102.659 0.74927 102.362 0.728601 102.065 0.728601C101.769 0.70793 101.557 0.697595 101.43 0.697595C101.175 0.697595 100.921 0.70793 100.667 0.728601C100.434 0.74927 100.211 0.780274 99.9991 0.821612C99.8931 2.14446 99.819 3.50865 99.7766 4.91418C99.7342 6.29903 99.713 7.70456 99.713 9.13076C99.713 11.0737 99.7236 12.9339 99.7448 14.7115C99.7872 16.4891 99.8084 18.3597 99.8084 20.3233V22.4936C100.296 22.4936 100.794 22.5246 101.302 22.5866C101.832 22.6486 102.351 22.6796 102.86 22.6796C103.093 22.6796 103.326 22.6693 103.559 22.6486C103.792 22.628 104.025 22.5866 104.259 22.5246C104.237 22.1732 104.227 21.7805 104.227 21.3464C104.227 20.8917 104.227 20.4266 104.227 19.9512C104.227 19.0831 104.227 18.184 104.227 17.2539C104.248 16.3237 104.269 15.4763 104.29 14.7115C104.312 13.9468 104.333 13.3163 104.354 12.8203C104.396 12.3242 104.428 12.0762 104.449 12.0762C104.492 12.0762 104.545 12.1795 104.608 12.3862C104.693 12.5722 104.778 12.7789 104.863 13.0063L105.18 13.9364C105.668 15.2593 106.251 16.6441 106.929 18.091C107.628 19.5172 108.327 20.9951 109.027 22.5246C109.45 22.5246 109.938 22.5453 110.489 22.5866C111.04 22.6486 111.527 22.6796 111.951 22.6796Z"
+                          fill="#5F413C"/>
+                </svg>
+            </a>
+            <!--  Navigation -->
+            <nav class="navbar">
+                <ul class="navbar__list flex items-center gap-10">
+                    <li class="link-item"><a class="transition font-s-medium text-md" href="#advantages">Преимущества</a></li>
+                    <li class="link-item"><a class="transition font-s-medium text-md" href="#catalog">Каталог</a></li>
+                    <li class="link-item"><a class="transition font-s-medium text-md" href="#order">Оформить заказ</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--  Basket   -->
+            <div class="shop-cart w-10-s h-8-1">
+                <a href="#">
+                        <span>
+                            <svg width="30" height="29" viewBox="0 0 30 29" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                            <path class="transition" fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M3.74992 10.4376H6.66627C6.66668 10.9532 6.96208 11.4494 7.47273 11.6957C8.19312 12.0431 9.0691 11.7615 9.42929 11.0666L9.75538 10.4376H21.0778L21.4039 11.0666C21.7641 11.7615 22.6401 12.0431 23.3604 11.6957C23.8711 11.4494 24.1665 10.9532 24.1669 10.4376H27.0833V13.2508H3.74992V10.4376ZM22.8804 7.62431H27.0833C28.6941 7.62431 29.9999 8.88385 29.9999 10.4376V13.2508C29.9999 14.4324 29.2447 15.4439 28.1744 15.8606C28.1794 15.9278 28.1819 15.9957 28.1819 16.0641C28.1819 16.2693 28.1586 16.474 28.1125 16.6744L25.844 26.5208C25.5474 27.808 24.3638 28.7238 22.9968 28.7238H7.83642C6.46938 28.7238 5.28576 27.808 4.98921 26.5208L2.72069 16.6744C2.65755 16.4003 2.63819 16.1267 2.65813 15.8604C1.58819 15.4435 0.833252 14.4322 0.833252 13.2508V10.4376C0.833252 8.88385 2.13909 7.62431 3.74992 7.62431H7.95278L11.1955 1.36872C11.5557 0.67388 12.4317 0.392238 13.1521 0.739661C13.8725 1.08708 14.1645 1.93201 13.8043 2.62685L11.2137 7.62431H19.6195L17.0289 2.62685C16.6687 1.93201 16.9607 1.08708 17.6811 0.739661C18.4014 0.392238 19.2774 0.67388 19.6376 1.36872L22.8804 7.62431ZM5.5679 16.0641H25.2653L22.9967 25.9105H7.83642L5.5679 16.0641Z"
+                                  fill="#5F413C"/>
+                            </svg>
+                        </span>
+                </a>
+            </div>
+            <!--  Burger   -->
+        </div>
+    </header>
+    <main>
+        <!--   Section Hero     -->
+        <section id="home" class="hero container relative min-h-screen pt-30">
+            <div class="absolute bg-radial nz-10 inset-0"></div>
+            <div class="hero-content">
+                <div class="hero-frame flex items-center gap-5">
+                    <!--   Hero Main Card   -->
+                    <div class="hero-main w-md space-y-7">
+                        <!--       Info        -->
+                        <div class="space-y-7">
+                            <h1 class="title text-primary text-6xl font-bold">Мечтай вместе с кофейными зернами</h1>
+                            <p class="subtitle subtext font-s-medium text-lg max-w-2xl">
+                                Кофейное зерно - это семя растения Coffea и источник кофе. Это пипс внутри красного или
+                                фиолетового плода, который часто называют вишней. Как и обычная вишня, кофейный плод
+                                также является так называемым косточковым плодом.
+                            </p>
+                        </div>
+                        <!--      Buttons      -->
+                        <div class="hero-buttons">
+                            <div class="controls-group flex gap-7-x">
+                                <a href="#catalog"
+                                   class="button border-linear-gr z-10 text-primary-foreground font-medium text-lg transition inline-flex items-center justify-center h-15-x px-5 rounded-xxl">
+                                    Выбрать кофе
+                                </a>
+                                <a href="#advantages"
+                                   class="button border-linear-gr z-10 text-primary-foreground font-medium text-lg transition inline-flex items-center justify-center h-15-x px-5 rounded-xxl">
+                                    Преимущества
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--   Hero image   -->
+                    <div class="main-img w-md-2 h-90 flex justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br blur-100"></div>
+                        <div class="img-container">
+                            <img src="./assets/images/photo.png" alt="coffee heart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--   Advantages   -->
+        <section id="advantages" class="overflow-hidden">
+            <div class="container flex-column-container bg-secondary py-27">
+                <!--      Fade-in   -->
+                <div class="fade-in advantages-title">
+                    <h2 class="font-bold text-4xxl text-primary text-center">Преимущества покупки кофе в зёрнах</h2>
+                    <p class="subtext font-s-medium text-lg max-w-4xl mt-7-x text-center">
+                        Кофе в зёрнах зачастую продаётся, как правило, двух видов – робуста и арабика. Последний сорт
+                        встречается намного чаще из-за насыщенности вкуса, робусту в большинстве случаев используют в
+                        качестве добавки. Ценители именно такого продукта предпочитают покупать кофе зёрна в магазинах по
+                        следующим причинам:
+                    </p>
+                </div>
+                <!--   advantages -->
+                <div class="advantages-container flex-row-container space-between mt-12-x">
+                    <div class="flex-row-container advantages-img">
+                        <img src="./assets/images/coffee2.png" alt="coffee seeds">
+                    </div>
+                    <!--   List   -->
+                    <div class="slide-right advantages-items">
+                        <div class="marker flex-row-container w-12-x h-12-x text-accent font-medium text-2xl border-solid rounded-full">1</div>
+                        <div class="subtext font-medium text-lg">
+                            В зерновом кофе намного больше кофеина.
+                        </div>
+                        <div class="marker flex-row-container w-12-x h-12-x text-accent font-medium text-2xl border-solid rounded-full">2</div>
+                        <div class="font-medium text-lg subtext">
+                            Вкус и аромат только что намолотого кофе выражен ярче.
+                        </div>
+
+                        <div class="marker flex-row-container w-12-x h-12-x text-accent font-medium text-2xl border-solid rounded-full">3</div>
+                        <div class="font-medium text-lg subtext">
+                            Такой напиток буквально переполнен витаминами и полезными микроэлементами.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--   Catalog Tabs   -->
+        <section id="catalog" >
+            <div class="container bg-secondary">
+                <!--  Fade in   -->
+                <h3 class="fade-in font-bold text-4xxl text-primary text-center">Кофе в зернах</h3>
+                <!--    Tab Navigation   -->
+                <nav class="nav-tab flex justify-center gap-15 py-12-x">
+                    <button class="btn border border-primary text-accent font-medium text-lg transition w-125 h-15-x px-9-x rounded-xxl">
+                        Blasercafe
+                    </button>
+                    <button class="btn border border-primary text-accent font-medium text-lg transition w-125 h-15-x px-9-x rounded-xxl">
+                        Boasi
+                    </button>
+                    <button class="btn border border-primary text-accent font-medium text-lg transition w-125 h-15-x px-9-x rounded-xxl">
+                        Lavazza
+                    </button>
+                    <button class="btn border border-primary text-accent font-medium text-lg transition w-125 h-15-x px-9-x rounded-xxl">
+                        Garibaldi
+                    </button>
+                    <button class="btn border border-primary text-accent font-medium text-lg transition w-125 h-15-x px-9-x rounded-xxl">
+                        Vergnano
+                    </button>
+                </nav>
+                <!--   Catalog Item Blaser   -->
+                <div class="catalog-item grid grid-cols-3 gap-6">
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-red box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/blacer1.png" alt="blaser opera" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">Blaser Cafe Opera</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">1000 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-black box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="assets/images/blasercafe-colombia-supremo.png" alt="blaser colombia" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">Blasercafe Colombia Supremo</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">250 г</div>
+                                    <div class="text-lg font-medium">515 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-red box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="assets/images/blasercafe-ethiopia-sidamo.png" alt="lavazza rossa" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">Blasercafe Ethiopia Sidamo</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">250 г</div>
+                                    <div class="text-lg font-medium">500 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--   Catalog Item Boasi   -->
+                <div class="catalog-item grid grid-cols-3 gap-6">
+                <!--  Next Card   -->
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-red box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/coffe1.png" alt="boasy gran coffe" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">BOASI Gran Caffe</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">1 276 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-green box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/coffe2.png" alt="boasy gran coffe" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">BOASI Gran Caffe Crema</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Ароматный кофе, с едва ощутимой финальной кислинкой.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">1 053 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-black box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/coffe3.png" alt="boasy gran riserva" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">BOASI Gran Riserva Speciale</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Изысканная смесь с особо выраженной полнотелостью.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">1 082 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-red box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/coffe4.png" alt="boasy gran professional" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">BOASI Gran Caffe Professional</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Насыщенная смесь с богатым, интенсивным вкусом.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">1 534 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-gray box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/coffe5.png" alt="boasy super crema" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">BOASI Super Crema Pro</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Специальная смесь из зерен арабики и робусты.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">992 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition-colors rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-blue box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/coffe6.png" alt="boasy gran riserva" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">ВOASI Gran Riserva</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Деликатная, ароматная и душистая смесь.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">1 503 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition-colors rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--   Catalog Item Lavazza  -->
+                <div class="catalog-item grid grid-cols-3 gap-6">
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-red box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/lavazza.png" alt="lavazza crema" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">LAVAZZA Crema Aroma</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">585 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-blue box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="assets/images/lavazza-decafeinato.png" alt="lavazza decafeinato" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">LAVAZZA Decafeinato</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">560 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-red box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="assets/images/kava-lavazza-qualita.png" height="200" width="200" alt="lavazza rossa" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">LAVAZZA Rossa</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">585 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--   Catalog Item Garibaldi  -->
+                <div class="catalog-item grid grid-cols-3 gap-6">
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-black box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/garibaldi.png" alt="Garibaldi Espresso Bar" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">Garibaldi Espresso Bar</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">637 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-red box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="assets/images/garibaldi-intenso.png" alt="Garibaldi Intenso" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">Garibaldi Intenso</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">700 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-black box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="assets/images/garibaldi-gusto.png" alt="Garibaldi Gusto Dolce" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">Garibaldi Gusto Dolce</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">750 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--   Catalog Item Vergnano  -->
+                <div class="catalog-item grid grid-cols-3 gap-6">
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-black box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="./assets/images/vergnana.png" alt="Caffe Vergnano Granaroma" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">Vergnano Gran Aroma</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">1 637 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-grey box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="assets/images/caffe-vergnano.png" alt="Caffe Vergnano Anticabottega" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">Vergnano Anticabottega</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">1 кг</div>
+                                    <div class="text-lg font-medium">1 142 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container transition-transform">
+                        <div class="coffee-card type-grey box-shadow-2 overflow-hidden rounded-2xl space-y-5">
+                            <div class="card-frame">
+                                <img src="assets/images/kofe-molotyj-caffe.png" alt="Caffe Vergnano 1882 Gran Aroma" loading="lazy">
+                            </div>
+                            <div class="product-item-label">
+                                <div class="product-item-text font-s-medium">Лучшая цена</div>
+                            </div>
+                            <div class="card-body space-y-2-x">
+                                <div class="coffee-card-name font-s-medium text-xl text-center">Vergnano Gran Aroma 1882</div>
+                                <div class="font-s-medium text-md text-center card-text">
+                                    Мягкий сбалансированный вкус и яркий насыщенный аромат.
+                                </div>
+                            </div>
+                            <div class="card-footer flex space-between items-center">
+                                <div class="card-price flex flex-col space-between">
+                                    <div class="text-lg font-medium">250 г</div>
+                                    <div class="text-lg font-medium">212 руб./шт</div>
+                                </div>
+                                <a href="#order" class="card-btn border border-primary font-s-medium text-lg transition rounded-xxl">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--   Order   -->
+        <section id="order">
+            <div class="container bg-secondary py-27 relative">
+                <!--  Fade in   -->
+                <div class="fade-in">
+                    <h3 class="font-bold text-4xxl text-primary text-center">Оформить заказ</h3>
+                    <p class="subtext font-s-medium text-md mt-5 text-center">
+                        Заполните данные, и мы перезвоним вам для уточнения информации
+                    </p>
+                </div>
+                <div class="order-container flex justify-center items-center space-between relative">
+                    <div class="float float-left">
+                        <img src="./assets/images/coffee-ring.png" width="202" loading="lazy" alt="">
+                    </div>
+                    <form id="form" name="form" class="pt-12-x" novalidate>
+                        <div class="form-controls flex-column-container gap-3-xx">
+                            <input type="text" id="name" name="name" minlength="2" required class="bg-input border border-primary text-primary font-medium text-lg transition w-306 h-20 px-3 rounded-xxl" placeholder="Ваше имя">
+                            <p class="text-red text-xs mt-1"></p>
+                            <input type="tel" id="phone" name="phone" minlength="5" required class="bg-input border border-primary text-primary font-medium text-lg transition w-306 h-20 px-3 rounded-xxl" placeholder="Ваш телефон">
+                            <p class="text-red text-xs mt-1"></p>
+                            <input type="text" id="choice" name="choice" minlength="10" required class="bg-input border border-primary text-primary font-medium text-lg transition w-306 h-20 px-3 rounded-xxl" placeholder="Зерна, которые вас интересуют">
+                            <p class="text-red text-xs mt-1"></p>
+                            <button class="btn mb-3 bg-gradient-to-br shadow text-primary font-medium text-lg transition w-306 h-20 rounded-xxl" type="submit">Оформить заказ</button>
+                        </div>
+                    </form>
+                    <div class="thanks-text"></div>
+                    <div class="float float-right">
+                        <img src="./assets/images/coffee-ring.png" width="202" loading="lazy" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-container bg-footer flex items-center space-between">
+            <a href="#" class="logo transition">
+                <svg width="113" height="23" viewBox="0 0 113 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.1495 5.72029C5.31903 5.55493 5.55214 5.44125 5.84882 5.37924C6.16669 5.31723 6.46337 5.26556 6.73886 5.22422C7.35341 5.20355 7.79842 5.32757 8.07391 5.59627C8.37059 5.86497 8.57191 6.21636 8.67787 6.65042C8.78382 7.06381 8.8368 7.51853 8.8368 8.0146C8.85799 8.51067 8.90038 8.95507 8.96395 9.34779C9.76922 9.49247 10.5427 9.59582 11.2844 9.65783C12.0473 9.69917 12.8208 9.63716 13.6049 9.4718C13.9439 8.52101 14.0711 7.59088 13.9863 6.68142C13.9015 5.77196 13.6578 4.93485 13.2552 4.17007C12.8526 3.38463 12.3122 2.6922 11.6341 2.09279C10.9559 1.49337 10.193 1.01797 9.3454 0.666591C8.51893 0.29454 7.62889 0.0775101 6.67528 0.0155023C5.72167 -0.0465066 4.75746 0.0775101 3.78266 0.387552C3.48598 0.470231 3.1999 0.573578 2.92441 0.697595C2.64892 0.800942 2.39462 0.935294 2.16152 1.10065C1.75888 1.45203 1.40923 1.85509 1.11255 2.30982C0.837059 2.76455 0.603954 3.26061 0.413232 3.79802C0.286084 4.10807 0.180127 4.44911 0.0953612 4.82116C0.0317871 5.17255 0.0211914 5.52393 0.0635741 5.87531C0.0423827 7.54954 0.0211914 9.02741 0 10.3089C0 11.5698 0 12.7066 0 13.7194C0.0211914 14.7115 0.0423827 15.6106 0.0635741 16.4168C0.0847655 17.2229 0.116553 17.998 0.158935 18.7421C0.243701 19.6102 0.519189 20.3336 0.985399 20.9124C1.4728 21.4911 2.06616 21.9459 2.76547 22.2766C3.46479 22.5866 4.21708 22.783 5.02235 22.8656C5.82763 22.969 6.61171 22.969 7.3746 22.8656C8.54012 22.845 9.5785 22.5659 10.4897 22.0285C11.4221 21.4705 12.1744 20.7677 12.7466 19.9202C13.3188 19.0728 13.6896 18.122 13.8592 17.0679C14.0287 15.993 13.9333 14.9182 13.5731 13.8434C13.2764 13.7607 12.9373 13.7091 12.5559 13.6884C12.1956 13.6677 11.8248 13.6574 11.4433 13.6574C11.0619 13.6574 10.6805 13.6677 10.299 13.6884C9.93875 13.7091 9.61029 13.6987 9.31361 13.6574C9.20765 14.1741 9.16527 14.7012 9.18646 15.2386C9.22884 15.7553 9.13348 16.2514 8.90038 16.7268C8.68846 17.1402 8.37059 17.4399 7.94676 17.6259C7.54413 17.7913 7.1097 17.8533 6.64349 17.812C6.02894 17.6466 5.58393 17.2849 5.30844 16.7268C5.05414 16.1481 4.89521 15.559 4.83163 14.9596C4.76806 14.2361 4.73627 13.3887 4.73627 12.4172C4.73627 11.4251 4.74687 10.4743 4.76806 9.56482C4.78925 8.65536 4.81044 7.86992 4.83163 7.20849C4.87401 6.54707 4.9164 6.18535 4.95878 6.12334C4.97997 6.082 5.00116 6.02 5.02235 5.93732C5.06474 5.83397 5.10712 5.76163 5.1495 5.72029Z"
+                          fill="#5F413C"/>
+                    <path d="M15.966 8.38665C15.9025 8.61402 15.8071 8.92406 15.68 9.31678C15.5528 9.68883 15.4786 9.98854 15.4574 10.2159C15.3939 10.6086 15.3515 10.991 15.3303 11.3631C15.3091 11.7144 15.2985 12.0762 15.2985 12.4482C15.3621 13.1303 15.3727 13.8847 15.3303 14.7115C15.3091 15.5383 15.3197 16.3651 15.3621 17.1919C15.4045 17.998 15.5316 18.7731 15.7435 19.5172C15.9554 20.2613 16.3475 20.8814 16.9197 21.3774C17.6614 22.1009 18.5726 22.5556 19.6533 22.7416C20.2467 22.7416 20.9036 22.7623 21.6241 22.8036C22.3446 22.8657 23.044 22.8657 23.7221 22.8036C24.4002 22.7623 25.0254 22.6383 25.5975 22.4316C26.1909 22.2249 26.6677 21.8735 27.0279 21.3774C27.2398 21.1707 27.3988 20.7884 27.5047 20.2303C27.6319 19.6722 27.7273 19.0418 27.7908 18.339C27.8756 17.6363 27.9286 16.9025 27.9498 16.1377C27.9921 15.3729 28.0239 14.6909 28.0451 14.0914C28.0239 13.4093 28.0027 12.7479 27.9815 12.1072C27.9604 11.4457 27.9074 10.8463 27.8226 10.3089C27.7378 9.75084 27.6107 9.26511 27.4412 8.85172C27.2716 8.43833 27.0385 8.13862 26.7419 7.95259C26.2968 7.5392 25.767 7.22916 25.1525 7.02247C24.5379 6.7951 23.8916 6.66075 23.2135 6.61941C22.7685 6.57807 22.3446 6.57807 21.942 6.61941C21.5606 6.64008 21.1579 6.62975 20.7341 6.58841C20.2255 6.58841 19.7169 6.61941 19.2083 6.68142C18.7209 6.74343 18.2547 6.85711 17.8097 7.02247C17.3859 7.16715 17.0044 7.35318 16.6654 7.58054C16.3475 7.80791 16.1144 8.07661 15.966 8.38665ZM19.9394 12.0452C20.2149 11.7144 20.5752 11.4871 21.0202 11.3631C21.8466 11.177 22.5142 11.2494 23.0228 11.5801C23.5314 11.9108 23.8386 12.4379 23.9446 13.1613C24.0717 13.7607 24.1035 14.4015 24.04 15.0836C23.9976 15.745 23.934 16.4064 23.8492 17.0679C23.7221 17.5846 23.4784 17.9256 23.1181 18.091C22.8426 18.2357 22.493 18.339 22.0692 18.401C21.6453 18.4424 21.2321 18.4217 20.8295 18.339C20.448 18.2357 20.1195 18.06 19.8441 17.812C19.5686 17.5432 19.4414 17.1712 19.4626 16.6958C19.505 15.9724 19.5262 15.2903 19.5262 14.6495C19.5262 13.9881 19.5686 13.3267 19.6533 12.6652C19.7169 12.3345 19.8123 12.1278 19.9394 12.0452Z"
+                          fill="#5F413C"/>
+                    <path d="M35.6499 11.4871C36.3069 11.5078 36.9956 11.5388 37.7161 11.5801C38.4578 11.6214 39.369 11.6731 40.4498 11.7351C40.4922 11.3424 40.5239 11.0324 40.5451 10.805C40.5663 10.5776 40.5769 10.3916 40.5769 10.2469C40.5981 10.1022 40.6087 9.96787 40.6087 9.84385C40.6087 9.69917 40.6087 9.51314 40.6087 9.28578C40.6299 8.9964 40.6299 8.74837 40.6087 8.54167C40.5875 8.31431 40.5981 8.08695 40.6405 7.85958H35.7771C35.6711 7.34284 35.6711 6.88811 35.7771 6.49539C35.9042 6.082 36.2115 5.83397 36.6989 5.75129C36.9956 5.70995 37.324 5.66861 37.6843 5.62727C38.0445 5.56527 38.4048 5.51359 38.7651 5.47225C39.1253 5.43091 39.4644 5.39991 39.7822 5.37924C40.1213 5.35857 40.418 5.35857 40.6723 5.37924C40.7147 5.08987 40.757 4.76949 40.7994 4.41811C40.8418 4.06673 40.8736 3.70501 40.8948 3.33296C40.916 2.96091 40.9054 2.58886 40.863 2.2168C40.8418 1.84475 40.7782 1.50371 40.6723 1.19366C39.6763 1.15232 38.6485 1.17299 37.5889 1.25567C36.5506 1.31768 35.5863 1.49337 34.6963 1.78275C33.9758 2.01011 33.393 2.36149 32.948 2.83689C32.503 3.29162 32.1534 3.80836 31.8991 4.3871C31.6659 4.94518 31.5176 5.52393 31.454 6.12334C31.3905 6.72276 31.3799 7.28084 31.4222 7.79757C31.0832 7.7769 30.7229 7.76657 30.3415 7.76657C29.9812 7.76657 29.5786 7.76657 29.1336 7.76657L29.2289 11.5491C29.6528 11.5284 30.0448 11.5181 30.4051 11.5181C30.7865 11.5181 31.1468 11.5181 31.4858 11.5181C31.4858 11.8281 31.4752 12.2725 31.454 12.8513C31.454 13.43 31.4434 14.0914 31.4222 14.8355C31.4222 15.559 31.4222 16.3134 31.4222 17.0989C31.4222 17.8843 31.4222 18.6387 31.4222 19.3622C31.4434 20.0649 31.454 20.7057 31.454 21.2844C31.4752 21.8425 31.507 22.2456 31.5494 22.4936C31.8249 22.5349 32.1216 22.5453 32.4394 22.5246C32.7785 22.5039 33.1282 22.4833 33.4884 22.4626C33.8487 22.4213 34.2089 22.3903 34.5692 22.3696C34.9294 22.3489 35.2897 22.3592 35.6499 22.4006V18.246V11.4871Z"
+                          fill="#5F413C"/>
+                    <path d="M47.6942 11.4871C48.3512 11.5078 49.0399 11.5388 49.7604 11.5801C50.5021 11.6214 51.4133 11.6731 52.4941 11.7351C52.5365 11.3424 52.5683 11.0324 52.5894 10.805C52.6106 10.5776 52.6212 10.3916 52.6212 10.2469C52.6424 10.1022 52.653 9.96787 52.653 9.84385C52.653 9.69917 52.653 9.51314 52.653 9.28578C52.6742 8.9964 52.6742 8.74837 52.653 8.54167C52.6318 8.31431 52.6424 8.08695 52.6848 7.85958H47.8214C47.7154 7.34284 47.7154 6.88811 47.8214 6.49539C47.9485 6.082 48.2558 5.83397 48.7432 5.75129C49.0399 5.70995 49.3684 5.66861 49.7286 5.62727C50.0889 5.56527 50.4491 5.51359 50.8094 5.47225C51.1696 5.43091 51.5087 5.39991 51.8266 5.37924C52.1656 5.35857 52.4623 5.35857 52.7166 5.37924C52.759 5.08987 52.8014 4.76949 52.8437 4.41811C52.8861 4.06673 52.9179 3.70501 52.9391 3.33296C52.9603 2.96091 52.9497 2.58886 52.9073 2.2168C52.8861 1.84475 52.8226 1.50371 52.7166 1.19366C51.7206 1.15232 50.6928 1.17299 49.6332 1.25567C48.5949 1.31768 47.6307 1.49337 46.7406 1.78275C46.0201 2.01011 45.4374 2.36149 44.9923 2.83689C44.5473 3.29162 44.1977 3.80836 43.9434 4.3871C43.7103 4.94518 43.5619 5.52393 43.4983 6.12334C43.4348 6.72276 43.4242 7.28084 43.4666 7.79757C43.1275 7.7769 42.7672 7.76657 42.3858 7.76657C42.0255 7.76657 41.6229 7.76657 41.1779 7.76657L41.2733 11.5491C41.6971 11.5284 42.0891 11.5181 42.4494 11.5181C42.8308 11.5181 43.1911 11.5181 43.5301 11.5181C43.5301 11.8281 43.5195 12.2725 43.4983 12.8513C43.4983 13.43 43.4878 14.0914 43.4666 14.8355C43.4666 15.559 43.4666 16.3134 43.4666 17.0989C43.4666 17.8843 43.4666 18.6387 43.4666 19.3622C43.4878 20.0649 43.4983 20.7057 43.4983 21.2844C43.5195 21.8425 43.5513 22.2456 43.5937 22.4936C43.8692 22.5349 44.1659 22.5453 44.4837 22.5246C44.8228 22.5039 45.1725 22.4833 45.5327 22.4626C45.893 22.4213 46.2532 22.3903 46.6135 22.3696C46.9737 22.3489 47.334 22.3592 47.6942 22.4006V18.246V11.4871Z"
+                          fill="#5F413C"/>
+                    <path d="M57.8313 14.7425C58.0432 14.7839 58.3823 14.8149 58.8485 14.8355C59.3147 14.8562 59.8339 14.8665 60.4061 14.8665C60.9994 14.8665 61.614 14.8562 62.2497 14.8355C62.8855 14.8149 63.4788 14.7839 64.0298 14.7425C64.602 14.7012 65.0894 14.6599 65.492 14.6185C65.9158 14.5772 66.2019 14.5358 66.3503 14.4945C66.4138 13.6264 66.4138 12.7686 66.3503 11.9211C66.2867 11.0737 66.096 10.2986 65.7781 9.59582C65.4814 8.89306 65.0364 8.29364 64.443 7.79757C63.8497 7.30151 63.0656 6.97079 62.0908 6.80544C61.3279 6.61941 60.5438 6.53673 59.7386 6.5574C58.9333 6.57807 58.1704 6.70209 57.4499 6.92945C56.7294 7.13615 56.083 7.45653 55.5109 7.89059C54.9387 8.30398 54.5149 8.81038 54.2394 9.4098C53.9851 10.0919 53.8156 10.7947 53.7308 11.5181C53.6672 12.2208 53.6037 12.9546 53.5401 13.7194C53.4977 14.5668 53.5189 15.4143 53.6037 16.2617C53.6884 17.1092 53.8474 17.9153 54.0805 18.6801C54.3136 19.4242 54.6208 20.1166 55.0023 20.7574C55.3837 21.3774 55.8605 21.8838 56.4327 22.2766C56.9413 22.5659 57.4923 22.752 58.0856 22.8346C58.679 22.8346 59.3253 22.8553 60.0246 22.8967C60.7451 22.938 61.4445 22.938 62.1226 22.8967C62.8007 22.8553 63.4258 22.7313 63.998 22.5246C64.5702 22.3179 65.0364 21.9665 65.3967 21.4705C65.545 21.3464 65.6615 21.1294 65.7463 20.8194C65.8523 20.4887 65.937 20.1063 66.0006 19.6722C66.0642 19.2175 66.1172 18.7317 66.1595 18.215C66.2019 17.6983 66.2443 17.1712 66.2867 16.6338C66.0536 16.5718 65.7569 16.5408 65.3967 16.5408C65.0364 16.5201 64.655 16.5201 64.2523 16.5408C63.8709 16.5614 63.5 16.5821 63.1398 16.6028C62.7795 16.6028 62.4934 16.5925 62.2815 16.5718C62.3239 17.4192 62.1862 18.06 61.8683 18.494C61.5716 18.9074 61.2008 19.1555 60.7557 19.2381C60.3107 19.3208 59.8551 19.2485 59.3889 19.0211C58.9227 18.7938 58.5624 18.4424 58.3081 17.967C58.075 17.5949 57.9373 17.2125 57.8949 16.8198C57.8737 16.4271 57.8525 15.9207 57.8313 15.3006V14.7425ZM61.6776 9.93687C62.059 10.1229 62.3557 10.4019 62.5676 10.774C62.8007 11.146 62.9173 11.5388 62.9173 11.9521C62.9173 12.1175 62.9173 12.2312 62.9173 12.2932C62.9173 12.3345 62.8537 12.3655 62.7265 12.3862C62.6206 12.3862 62.4299 12.3759 62.1544 12.3552C61.8789 12.3345 61.4656 12.3242 60.9147 12.3242C60.1094 12.3242 59.4949 12.3345 59.071 12.3552C58.6684 12.3552 58.3717 12.3449 58.181 12.3242C57.9903 12.2829 57.8843 12.2208 57.8631 12.1382C57.8631 12.0348 57.8843 11.8695 57.9267 11.6421C57.9691 11.3734 58.0326 11.115 58.1174 10.867C58.2234 10.619 58.3717 10.4019 58.5624 10.2159C58.7532 10.0299 59.0075 9.88519 59.3253 9.78185C59.6432 9.6785 60.0564 9.62683 60.565 9.62683C60.7981 9.62683 60.9994 9.65783 61.169 9.71984C61.3385 9.76118 61.508 9.83352 61.6776 9.93687Z"
+                          fill="#5F413C"/>
+                    <path d="M81.7141 7.82858C82.0108 6.27836 81.8836 4.99685 81.3326 3.98405C80.7817 2.97124 79.9976 2.20647 78.9804 1.68973C78.4718 1.46237 77.9102 1.27634 77.2957 1.13165C76.7023 0.986969 76.0878 0.904291 75.452 0.883622C74.8375 0.842282 74.2229 0.862951 73.6084 0.94563C72.9938 1.00764 72.4323 1.14199 71.9237 1.34869C70.9065 1.76208 70.0376 2.3925 69.3171 3.23995C68.6178 4.0874 68.141 5.02786 67.8867 6.06133C67.6324 7.09481 67.643 8.15929 67.9185 9.25477C68.2152 10.3503 68.8509 11.3527 69.8257 12.2622C70.1224 12.5102 70.4509 12.7273 70.8111 12.9133C71.1714 13.0993 71.5634 13.2337 71.9873 13.3163C72.4323 13.399 72.9091 13.492 73.4177 13.5954C73.9263 13.6781 74.3925 13.8124 74.8163 13.9984C75.2613 14.1845 75.6428 14.4325 75.9606 14.7425C76.2785 15.0319 76.4692 15.4246 76.5328 15.9207C76.6599 16.6441 76.5116 17.1815 76.0878 17.5329C75.6851 17.8843 75.1977 18.0703 74.6256 18.091C74.0746 18.091 73.5448 17.9256 73.0362 17.5949C72.5488 17.2642 72.2839 16.7681 72.2415 16.1067C71.521 16.1274 70.7158 16.1171 69.8257 16.0757C68.9357 16.0137 68.1198 16.0344 67.3781 16.1377V16.2307V16.3237C67.3146 17.3159 67.4947 18.2047 67.9185 18.9901C68.3423 19.7549 68.9145 20.406 69.635 20.9434C70.3555 21.4808 71.1714 21.9045 72.0826 22.2146C73.015 22.5039 73.9474 22.659 74.8799 22.6796C75.5368 22.7003 76.1725 22.6486 76.7871 22.5246C77.4228 22.3799 78.0056 22.1629 78.5354 21.8735C79.0864 21.5841 79.5738 21.2121 79.9976 20.7574C80.4214 20.3026 80.7605 19.7549 81.0148 19.1141C81.2691 18.5767 81.4492 18.0186 81.5552 17.4399C81.6823 16.8405 81.7247 16.2514 81.6823 15.6727C81.6611 15.0939 81.5552 14.5358 81.3644 13.9984C81.1737 13.4404 80.8876 12.9236 80.5062 12.4482C79.8916 11.5594 79.097 10.8257 78.1221 10.2469C77.1685 9.66816 76.1302 9.31678 75.007 9.19277C74.562 9.13076 74.1488 9.01707 73.7673 8.85172C73.3859 8.68636 73.1104 8.35565 72.9409 7.85958C72.9197 7.7149 72.8985 7.58054 72.8773 7.45653C72.8773 7.31184 72.8985 7.16715 72.9409 7.02247C73.0256 6.44372 73.3011 6.051 73.7673 5.8443C74.2547 5.63761 74.7527 5.58594 75.2613 5.68928C75.7699 5.79263 76.2043 6.03033 76.5646 6.40238C76.9248 6.77443 77.0414 7.2395 76.9142 7.79757C77.6559 8.00427 78.4506 8.09728 79.2983 8.07661C80.1459 8.03527 80.9406 7.95259 81.6823 7.82858H81.7141Z"
+                          fill="#5F413C"/>
+                    <path d="M97.3327 1.78275C97.0784 1.63806 96.7499 1.54505 96.3473 1.50371C95.9447 1.46237 95.5208 1.45203 95.0758 1.4727C94.6308 1.49337 94.1858 1.53471 93.7408 1.59672C93.3169 1.63806 92.9673 1.66906 92.6918 1.68973C92.6282 4.0874 92.5858 6.56774 92.5647 9.13076C92.5647 11.6938 92.5117 14.2155 92.4057 16.6958C92.2998 17.1712 92.0667 17.5432 91.7064 17.812C91.3461 18.0807 90.9541 18.2253 90.5303 18.246C90.1065 18.2667 89.6932 18.1633 89.2906 17.936C88.9091 17.7086 88.6442 17.3469 88.4959 16.8508C88.0721 11.7041 87.9767 6.62975 88.2098 1.62772V1.59672C87.892 1.51404 87.5423 1.46237 87.1609 1.4417C86.7794 1.40036 86.3874 1.37969 85.9847 1.37969C85.5821 1.37969 85.1795 1.39002 84.7768 1.41069C84.3954 1.43136 84.0457 1.4417 83.7278 1.4417H83.6961L83.7278 1.4727C83.7702 4.20108 83.7596 6.95012 83.6961 9.71984C83.6325 12.4896 83.6007 15.2386 83.6007 17.967C83.6431 18.9178 83.9186 19.7342 84.4272 20.4163C84.9569 21.0777 85.6033 21.6151 86.3662 22.0285C87.1503 22.4213 88.0191 22.69 88.9727 22.8346C89.9263 23 90.8481 23.0413 91.7382 22.9587C93.264 22.814 94.4719 22.2662 95.3619 21.3154C96.252 20.3646 96.7817 19.2071 96.9513 17.843C97.2479 15.1766 97.4175 12.4999 97.4599 9.81285C97.5022 7.10514 97.4599 4.42844 97.3327 1.78275Z"
+                          fill="#5F413C"/>
+                    <path d="M111.951 22.6796C112.311 22.6796 112.566 22.659 112.714 22.6176C112.862 22.5763 112.958 22.5453 113 22.5246V21.9045C113 21.4911 112.989 21.0777 112.968 20.6643C112.968 20.251 112.968 19.8376 112.968 19.4242C112.968 18.8454 112.968 18.277 112.968 17.7189C112.989 17.1609 113 16.5821 113 15.9827C113 15.0939 113 14.2051 113 13.3163C113 12.4275 112.989 11.5491 112.968 10.681V0.697595C112.354 0.573578 111.654 0.51157 110.87 0.51157C110.065 0.51157 109.302 0.573578 108.582 0.697595C108.56 1.21433 108.539 1.70007 108.518 2.1548C108.518 2.58886 108.518 3.02292 108.518 3.45698C108.518 4.20108 108.529 4.93485 108.55 5.65828C108.592 6.36104 108.613 7.12581 108.613 7.95259C108.613 8.30398 108.592 8.66569 108.55 9.03774C108.507 9.40979 108.454 9.61649 108.391 9.65783C108.37 9.65783 108.296 9.54415 108.168 9.31678C108.041 9.06875 107.882 8.77938 107.692 8.44866C107.522 8.09728 107.331 7.7149 107.119 7.30151C106.907 6.86745 106.706 6.46439 106.515 6.09234C106.325 5.69962 106.155 5.35857 106.007 5.0692C105.859 4.77982 105.763 4.58346 105.721 4.48012C105.53 4.04606 105.361 3.69467 105.212 3.42597C105.085 3.1366 104.958 2.87823 104.831 2.65086C104.725 2.4235 104.608 2.1858 104.481 1.93777C104.354 1.68973 104.216 1.37969 104.068 1.00764C104.068 0.966299 103.951 0.92496 103.718 0.883622C103.506 0.842282 103.252 0.811278 102.955 0.790608C102.659 0.74927 102.362 0.728601 102.065 0.728601C101.769 0.70793 101.557 0.697595 101.43 0.697595C101.175 0.697595 100.921 0.70793 100.667 0.728601C100.434 0.74927 100.211 0.780274 99.9991 0.821612C99.8931 2.14446 99.819 3.50865 99.7766 4.91418C99.7342 6.29903 99.713 7.70456 99.713 9.13076C99.713 11.0737 99.7236 12.9339 99.7448 14.7115C99.7872 16.4891 99.8084 18.3597 99.8084 20.3233V22.4936C100.296 22.4936 100.794 22.5246 101.302 22.5866C101.832 22.6486 102.351 22.6796 102.86 22.6796C103.093 22.6796 103.326 22.6693 103.559 22.6486C103.792 22.628 104.025 22.5866 104.259 22.5246C104.237 22.1732 104.227 21.7805 104.227 21.3464C104.227 20.8917 104.227 20.4266 104.227 19.9512C104.227 19.0831 104.227 18.184 104.227 17.2539C104.248 16.3237 104.269 15.4763 104.29 14.7115C104.312 13.9468 104.333 13.3163 104.354 12.8203C104.396 12.3242 104.428 12.0762 104.449 12.0762C104.492 12.0762 104.545 12.1795 104.608 12.3862C104.693 12.5722 104.778 12.7789 104.863 13.0063L105.18 13.9364C105.668 15.2593 106.251 16.6441 106.929 18.091C107.628 19.5172 108.327 20.9951 109.027 22.5246C109.45 22.5246 109.938 22.5453 110.489 22.5866C111.04 22.6486 111.527 22.6796 111.951 22.6796Z"
+                          fill="#5F413C"/>
+                </svg>
+            </a>
+            <div><span class="text-md font-s-medium text-primary-foreground">Все права защищены</span></div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
