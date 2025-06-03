@@ -191,7 +191,7 @@
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
     --space-y-reverse: 0;
     margin-top: calc(1rem * calc(1 - var(--space-y-reverse)));
-    margin-bottom: calc(1rem * var(tw-space-y-reverse));
+    margin-bottom: calc(1rem * var(--space-y-reverse));
 }
 /* 20px */
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
